@@ -79,4 +79,9 @@ void main()
 			printf("\nquery cannot be heard for so long for %s ",s[i].student_name);
 		}
 	}
+
+	 int	total=time1+time2-60;
+	int avg=total/(nf+ns);
+	printf("\nTotal querying time = %d ",total);
+	printf("\nAverage querying time = %d ",avg);
 }
