@@ -1,6 +1,6 @@
 #include<stdio.h>
-int nf;
-int ns;
+int numberOfFaculty;
+int numberOfStudent;
 
 struct Teacher
 {
@@ -33,5 +33,29 @@ void main()
 		scanf("%s",&s[i].student_name);
 		printf("Enter time(in mins) of query for student%d ",(i+1));
 		scanf("%d",&s[i].stime);
+	}
+
+	f_t_slice=60/numberOfFaculty;
+	s_t_slice=60/numberOfStudent;
+	printf("\nTeacher:-----------------");
+	for(i=0;i<nf;i++)
+	{  
+		if(t[i].ftime<f_t_slice)
+		{
+			time1=time1+t[i].ftime;
+			printf("\nquery has been heard %s ",t[i].Tn);
+			
+		}
+		else if(t[i].ftime=f_t_slice)
+		{
+			time1=time1+f_t_slice;
+			printf("\nquery has been heard for %s ",t[i].Tn);
+		}
+		else
+		{
+			time1=time1+f_t_slice;
+			printf("\nquery cannot be heard for so long for %s ",t[i].Tn);
+			
+		}
 	}
 }
