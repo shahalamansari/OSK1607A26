@@ -121,6 +121,12 @@ void result(int query[][2], int n,int bt[],int quantum)
 		}
 	}
    }
+
+    printf("\n******************************************************************************\n");
+	printf("\nTotal Query time : %d\n",t);
+	float f = t/n;
+	printf("\nAverage Query time: %f\n",f);
+	printf("\n*******************************************************************************\n");
 }
 
 int main(int argc, char const *argv[])
