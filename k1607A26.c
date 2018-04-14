@@ -3,6 +3,18 @@
 #include<stdbool.h>
 #include<stdlib.h>
 
+void result(int query[][2], int n,int bt[],int quantum)
+{
+	// Make a copy of burst times bt[] to store remaining
+	// burst times.
+	int rem_bt[n];
+	for (int i = 0 ; i < n ; i++){
+		rem_bt[i] = bt[i];
+	}
+
+	int t = 0; // Current time
+}
+
 int main(int argc, char const *argv[])
 {
 	printf("\n***********SUDESH ONLINE 120 MINUTES QUERY PORTAL***************\n");
@@ -37,4 +49,23 @@ int main(int argc, char const *argv[])
 		}
 
 	}
+
+
+		printf("\nQUERY\tBurst Time");
+		for (int i = 0; i < n; ++i)
+		{
+			if (query[i][1]==1)
+
+			{
+				printf("\n%d\t\t%d",query[i][0],burst_time[i]);
+			}
+
+			if (query[i][1]==0)
+			{
+				printf("\n%d\t\t%d",query[i][0],burst_time[i]);
+			}
+		}
+
+		result(query, n, burst_time, time_quantum);
+	return 0;
 }
