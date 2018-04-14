@@ -58,4 +58,25 @@ void main()
 			
 		}
 	}
+
+	printf("\nStudent:-----------------");
+	for(i=0;i<ns;i++)
+	{
+		if(s[i].stime<s_t_slice)
+		{
+			time2+=s[i].stime;
+			printf("\nquery has been heard for %s ",s[i].student_name);
+			
+		}
+		else if(s[i].stime=s_t_slice)
+		{
+			time2+=s_t_slice;
+			printf("\nquery has been heard for %s ",s[i].student_name);
+		}
+		else
+		{
+			time2+=s_t_slice;
+			printf("\nquery cannot be heard for so long for %s ",s[i].student_name);
+		}
+	}
 }
