@@ -18,7 +18,7 @@ void main()
     int i,f_t_slice,s_t_slice,time1=0,time2=60;
 	printf("Enter no. of Teacher ");
 	scanf("%d",&numberOfFaculty);
-	for(i=0;i<nf;i++)
+	for(i=0;i<numberOfFaculty;i++)
 	{
 		printf("Enter name of Teacher%d ",(i+1));
 		scanf("%s",&t[i].teacher_name);
@@ -27,7 +27,7 @@ void main()
 	}
 	printf("Enter no. of students ");
 	scanf("%d",&numberOfStudent);
-	for(i=0;i<ns;i++)
+	for(i=0;i<numberOfStudent;i++)
 	{
 		printf("Enter name of student%d ",(i+1));
 		scanf("%s",&s[i].student_name);
