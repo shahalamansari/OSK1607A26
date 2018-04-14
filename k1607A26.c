@@ -13,6 +13,55 @@ void result(int query[][2], int n,int bt[],int quantum)
 	}
 
 	int t = 0; // Current time
+
+	printf("\nTEACHER'S QUERIES........................................................\n");
+
+	while(1)
+	{
+		//printf("\nInside While loop...\n");
+		
+		bool done = true;
+
+		for (int i = 0; i < n; i++)
+		{
+			
+			//printf("\nINSIDE FOR LOOP..\n");
+			if (query[i][1]==1)
+			{
+				continue;
+			}
+
+			if (rem_bt[i]>0)
+			{
+				done = false;
+
+				if (rem_bt[i]>quantum)
+				{
+					t = t + quantum;
+					rem_bt[i]-=quantum;
+				}
+
+				else
+				{
+					
+					t = t+rem_bt[i];
+						if (t>120)
+		          {
+			         printf("\nTime over,  Query %d , come back tomorrow...\nYour remaining time is %d\n",query[i][0],rem_bt[i]);
+			         done=true;
+			           break;
+		           }
+					rem_bt[i] = 0;
+					printf("\nTeacher Query no %d Resolved....\n",query[i][0]);
+				}
+			}
+			
+		}
+		if (done==true)
+		{
+			break;
+		}
+	}
 }
 
 int main(int argc, char const *argv[])
