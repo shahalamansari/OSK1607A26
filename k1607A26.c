@@ -145,6 +145,10 @@ int main(int argc, char const *argv[])
 	char str[10];
 	printf("\nEnter the number of queries: ");
 	scanf("%d",&n);
+	while(n<1){
+		printf("\nQuery cannot be less than 1, enter again: ");
+		scanf("%d",&n);
+	}
 	int query[n][2];
 	int burst_time[n];
 
