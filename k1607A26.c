@@ -50,13 +50,22 @@ void result(int query[][2], int n,int bt[],int quantum)
 		          {
 			         printf("\nTime over,  Query %d , come back tomorrow...\nYour remaining time is %d\n",query[i][0],rem_bt[i]);
 			         done=true;
+			         t=120;
 			           break;
 		           }
 		           else{
+		           	count++;
 		           	t = t+rem_bt[i];
+		           		if (t>=120)
+		          {
+			         printf("\nTime over,  Query %d , come back tomorrow...\nYour remaining time is %d\n",query[i][0],rem_bt[i]);
+			         done=true;
+			         t=120;
+			           break;
+		           } else{
 					rem_bt[i] = 0;
 					printf("\nTeacher Query no %d Resolved....\n",query[i][0]);
-					count++;
+					}
 				}
 				}
 			}
@@ -112,13 +121,22 @@ void result(int query[][2], int n,int bt[],int quantum)
 		          {
 			         printf("\nTime over,  Query %d , come back tomorrow...\nYour remaining time is %d\n",query[i][0],rem_bt[i]);
 			         done=true;
+			         t=120;
 			           break;
 		           }
 		           else{
+		           	count++;
 		           	t = t+rem_bt[i];
+		           		if (t>=120)
+		          {
+			         printf("\nTime over,  Query %d , come back tomorrow...\nYour remaining time is %d\n",query[i][0],rem_bt[i]);
+			         done=true;
+			         t=120;
+			           break;
+		           }else{
 					rem_bt[i] = 0;
 					printf("\nStudent Query no %d Resolved....\n",query[i][0]);
-					count++;
+					}
 				}
 				}
 			}
