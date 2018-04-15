@@ -2,6 +2,7 @@
 #include<string.h>
 #include<stdbool.h>
 #include<stdlib.h>
+int count = 0;
 
 void result(int query[][2], int n,int bt[],int quantum)
 {
@@ -53,6 +54,7 @@ void result(int query[][2], int n,int bt[],int quantum)
 		           }
 					rem_bt[i] = 0;
 					printf("\nTeacher Query no %d Resolved....\n",query[i][0]);
+					count++;
 				}
 			}
 			
@@ -112,6 +114,7 @@ void result(int query[][2], int n,int bt[],int quantum)
 		           }
 					rem_bt[i] = 0;
 					printf("\nStudent Query no %d Resolved....\n",query[i][0]);
+					count++;
 				}
 			}
 		}
@@ -124,7 +127,7 @@ void result(int query[][2], int n,int bt[],int quantum)
 
     printf("\n******************************************************************************\n");
 	printf("\nTotal Query time : %d\n",t);
-	float f = t/n;
+	float f = t/count;
 	printf("\nAverage Query time: %f\n",f);
 	printf("\n*******************************************************************************\n");
 }
